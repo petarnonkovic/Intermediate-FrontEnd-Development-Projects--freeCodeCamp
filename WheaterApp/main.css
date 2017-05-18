@@ -1,0 +1,160 @@
+/* Variables */
+/* Fonts */
+@import url("https://fonts.googleapis.com/css?family=Quicksand:400,500");
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+/* Mixins */
+/* Resets */
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0; }
+
+.clearfix:after {
+  content: " ";
+  display: table;
+  clear: both; }
+
+/* Main Styles */
+html {
+  box-sizing: border-box;
+  height: 100%; }
+
+*,
+::before,
+::after {
+  box-sizing: inherit; }
+
+body {
+  background-color: #2c3e50;
+  color: whitesmoke;
+  font-family: 'Lato', cursive;
+  font-size: 16px; }
+
+input[type="checkbox"] {
+  position: absolute;
+  top: -9999em; }
+
+.unit-check-wrapp {
+  width: 60px;
+  position: relative;
+  text-align: center;
+  margin: 0 auto 20px; }
+  .unit-check-wrapp label {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    border: 1px solid whitesmoke;
+    border-radius: 2px;
+    cursor: pointer; }
+    .unit-check-wrapp label .check-celsius,
+    .unit-check-wrapp label .check-fahrenheit {
+      display: inline-block;
+      width: 25px;
+      padding: 1px 2px;
+      font-size: 16px;
+      color: #bdc3c7; }
+
+.cover {
+  width: 32px;
+  height: 30px;
+  padding: 3px 2px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: springgreen;
+  border-radius: 2px;
+  display: block;
+  color: whitesmoke;
+  position: absolute;
+  top: -3px;
+  left: -2px;
+  z-index: 99;
+  transition: all 0.6s ease; }
+
+#unit_check:checked ~ .cover {
+  left: 32px;
+  content: "&#x2109;"; }
+
+.errorInfo {
+  height: 20px;
+  text-align: center;
+  color: red; }
+
+h1 {
+  font-size: 2.5rem;
+  text-align: center; }
+
+.main-title {
+  font-family: 'Quicksand', cursive;
+  margin: 30px 0 20px; }
+
+h2 {
+  text-align: center;
+  font-size: 2rem; }
+
+h3 {
+  text-align: center; }
+
+.wa-container {
+  width: 600px;
+  margin: auto;
+  height: 400px;
+  background-color: #4f6f8f;
+  border-radius: 8px; }
+
+.wa-city {
+  font-family: 'Quicksand', cursive;
+  margin-top: 20px;
+  margin-bottom: 10px; }
+
+.user-coords {
+  text-align: center;
+  margin-bottom: 10px; }
+
+.tempt-container {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-content: stretch;
+  align-content: stretch; }
+
+.wa-tempt-wrapp {
+  width: 250px;
+  display: inline-block; }
+  .wa-tempt-wrapp .wa-icon {
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: 30px auto 0; }
+  .wa-tempt-wrapp .caption-decs {
+    color: #bdc3c7;
+    display: block;
+    text-align: center; }
+  .wa-tempt-wrapp .wa-main-tempt {
+    font-family: 'Quicksand', cursive;
+    font-size: 2.5rem;
+    display: block;
+    margin-top: 80px;
+    padding-left: 20px; }
+
+.other-info {
+  margin-top: 40px; }
+  .other-info .list {
+    list-style-type: none;
+    text-align: center; }
+    .other-info .list > li {
+      display: inline-block;
+      margin-left: 10px;
+      letter-spacing: 2px; }
+    .other-info .list li:not(:last-child)::after {
+      content: " | ";
+      margin-left: 10px; }
+  .other-info .sync-time {
+    color: #c2c2c2;
+    font-size: 12px;
+    text-align: right;
+    margin-top: 20px;
+    padding-right: 30px;
+    background-color: #1a252f; }
+
+/*# sourceMappingURL=main.css.map */

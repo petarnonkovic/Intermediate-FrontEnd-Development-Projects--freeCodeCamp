@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Wheater App</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<body>
+    <!--  Main Headline -->
+    <h1 class="main-title">Local Wheater Application</h1>
+    <!-- Unit check checkbox -->
+    <p class="unit-check-wrapp">
+        <input type="checkbox" name="unit_check" id="unit_check">
+        <span id="cover" class="cover"></span>
+        <label id="check-label" class="unit-label" for="unit_check">
+            <span id="celsius" class="check-celsius">&#x2103;</span>
+            <span id="fahrenheit" class="check-fahrenheit">&#x2109;</span>
+        </label>
+    </p>
+    <!-- / .unit-check-wrapp -->
+    <!-- error info -->
+    <p class="errorInfo">
+        <span id="notifications"></span>
+    </p>
+    <!-- / .errorInfo -->
+    <!-- main weather container -->
+    <div class="wa-container">
+        <!-- city name -->
+        <h2 class="wa-city" id="wa-city"></h2>
+        <!-- city coords -->
+        <p class="user-coords" id="user-coords"></p>
+        <section class="tempt-container">
+            <!-- weather icon -->
+            <div class="wa-tempt-wrapp">
+                <img id="wa-icon" class="wa-icon" src="">
+                <!-- weather desciption -->
+                <h3 class="caption" id="caption"></h3>
+            </div>
+            <!-- / .wa-icon-wrapp <small class="caption-decs" id="caption-desc"></small> -->
+            <!-- weather temp main -->
+            <div class="wa-tempt-wrapp">
+                <span class="wa-main-tempt" id="wa-tempt"></span>
+            </div>
+        </section>
+        <div class="other-info">
+          <ul class="list">
+            <li id="wind"></li>
+            <li id="cloud"></li>
+            <li id="humi"></li>
+          </ul>
+          <p class="sync-time" id="sync"></p>
+        </div>
+    </div>
+    <!-- /.wa-container -->
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.1.0/dist/jquery.min.js"></script>
+   <script src="main.js"></script>
+</body>
+
+</html>

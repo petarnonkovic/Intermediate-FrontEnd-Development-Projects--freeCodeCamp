@@ -1,0 +1,221 @@
+/* Variables */
+
+// colors
+$midnight-blue: rgb(44, 62, 80);
+$alsphalt-blue: rgb(52, 73, 94);
+$spring-green: rgb(0, 255, 127);
+$whitesmoke: rgb(245, 245, 245);
+$silver-grey: rgb(189, 195, 199);
+$darken-red: rgb(192, 57, 43);
+$red: rgb(255, 0, 0);
+// size
+$base-font-size: 16px;
+$headline-size-h1: 2.5rem;
+$headline-size-h2: 2rem;
+$icon-size: 3em;
+$tempt-size: 4em;
+
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+
+/* Mixins */
+
+@mixin out-sight($indent: -9999em) {
+  position: absolute;
+  top: $indent;
+}
+
+
+/* Resets */
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+.clearfix:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+
+/* Main Styles */
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: $midnight-blue;
+  color: $whitesmoke;
+  font-family: 'Lato', cursive;
+  font-size: $base-font-size;
+}
+
+// move out checkbox
+input[type="checkbox"] {
+  @include out-sight;
+}
+
+// checkbox label style
+.unit-check-wrapp {
+  width: 60px;
+  position: relative;
+  text-align: center;
+  margin: 0 auto 20px;
+  label {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    border: 1px solid $whitesmoke;
+    border-radius: 2px;
+    cursor: pointer;
+    .check-celsius,
+    .check-fahrenheit,
+    {
+      display: inline-block;
+      width: 25px;
+      padding: 1px 2px;
+      font-size: $base-font-size;
+      color: $silver-grey;
+    }
+  }
+}
+
+.cover {
+  width: 32px;
+  height: 30px;
+  padding: 3px 2px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: $spring-green;
+  border-radius: 2px;
+  display: block;
+  color: $whitesmoke;
+  position: absolute;
+  top: -3px;
+  left: -2px;
+  z-index: 99;
+  transition: all 0.6s ease;
+}
+
+#unit_check:checked ~ .cover {
+  left: 32px;
+  content: "&#x2109;";
+}
+
+// errors field style
+.errorInfo {
+  height: 20px;
+  text-align: center;
+  color: $red;
+}
+
+// headline styles
+h1 {
+  font-size: $headline-size-h1;
+  text-align: center;
+}
+
+.main-title {
+  font-family: 'Quicksand', cursive;
+  margin: 30px 0 20px;
+}
+
+h2 {
+  text-align: center;
+  font-size: $headline-size-h2;
+}
+
+h3 {
+  text-align: center;
+}
+
+// weather container
+.wa-container {
+  width: 600px;
+  //height: 100%;
+  margin: auto;
+  height: 400px;
+  background-color: lighten($alsphalt-blue, 15%);
+  border-radius: 8px;
+}
+
+.wa-city {
+  font-family: 'Quicksand', cursive;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.user-coords {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.tempt-container {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-content: stretch;
+  align-content: stretch;
+}
+
+.wa-tempt-wrapp {
+  width: 250px;
+  display: inline-block;
+  .wa-icon {
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: 30px auto 0;
+  }
+  .caption-decs {
+    color: $silver-grey;
+    display: block;
+    text-align: center;
+  }
+  .wa-main-tempt {
+    font-family: 'Quicksand', cursive;
+    font-size: $headline-size-h1;
+    display: block;
+    margin-top: 80px;
+    padding-left: 20px;
+  }
+}
+
+.other-info {
+  margin-top: 40px;
+  .list {
+    list-style-type: none;
+    text-align: center;
+    > li {
+      display: inline-block;
+      margin-left: 10px;
+      letter-spacing: 2px;
+    }
+    li:not(:last-child)::after {
+      content: " | ";
+      margin-left: 10px;
+    }
+  }
+  .sync-time {
+    color: darken($whitesmoke, 20%);
+    font-size: 12px;
+    text-align: right;
+    margin-top: 20px;
+    padding-right: 30px;
+    background-color: darken($midnight-blue, 10%);
+  }
+}

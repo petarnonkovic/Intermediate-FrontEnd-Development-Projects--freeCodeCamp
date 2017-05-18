@@ -6,4 +6,5 @@ Project solutions are also on Codepen
 -- <h2>Random Quote Generator</h2>
    http://codepen.io/petarr/pen/dWerwY
    
--- <h2></h2>
+-- <h2>Local Weather App</h2>
+  http://codepen.io/petarr/pen/QvVmJG

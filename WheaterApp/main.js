@@ -22,6 +22,9 @@ function lastSync() {
     var year = now.getFullYear();
     var hour = now.getHours();
     var minute = now.getMinutes();
+    if(now.getMinutes() < 10) {
+      minute = "0" + now.getMinutes();
+    }
     str += dayName + " / " + dayNum + " / " + month + " / " + year + " / " + hour + ":" + minute;
 
     return str;

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Random Quote Generator</title>
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- random -->
+        <div class="wiki_random">
+            <h2 class="wiki_random_title">Read Random Wikipedia Article</h2>
+            <a href="#" class="wiki_random_link" id="random_wiki" target='_blank'>Shuffle Choice</a>
+        </div>
+        <!-- / .random -->
+        <!-- search -->
+        <div class="wiki_search">
+            <h2 class="wiki_search_title">Search Article on Wikipedia</h2>
+            <section class="search_section">
+                <form id="searchForm">
+                    <label>
+                        <input type="text" class="search_input" id="searchWiki" placeholder="Search..." /><span id="totalHits">Browse Wikipedia</span>
+                    </label>
+                </form>
+                <p class="errors"></p>
+            </section>
+            <!-- / .section_search -->
+
+            <!-- results -->
+            <section id="resWrapp" class="results_section">
+            </section>
+            <!-- / .section_results -->
+        </div>
+        <!-- / .search -->
+    </div>
+    <!-- / .container -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.1.0/dist/jquery.min.js"></script>
+    <script src="MediaWikiJS.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

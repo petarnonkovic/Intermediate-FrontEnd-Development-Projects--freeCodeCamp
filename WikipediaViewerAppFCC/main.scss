@@ -1,0 +1,240 @@
+/* fonts */
+
+@import url('https://fonts.googleapis.com/css?family=Aref+Ruqaa');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700');
+
+/* Colors */
+
+$light-blue: #3c8ecf;
+$dark-blue: #296fa6;
+$white: #fff;
+$white-smoke: #dbd7d2;
+$allmost-black: #111;
+$errors-bg: rgba(200,
+8,
+21,
+0.6);
+
+/* Resets */
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+input {
+  border: 0;
+  outline: 0;
+  &:focus {
+    outline: 0;
+    &::-webkit-input-placeholder {
+      color: transparent;
+    }
+    &:-moz-placeholder {
+      color: transparent;
+    }
+    &::-moz-placeholder {
+      color: transparent;
+    }
+    &:-ms-input-placeholder {
+      color: transparent;
+    }
+  }
+}
+
+.errors {
+  text-align: center;
+  background-color: $errors-bg;
+  color: $white;
+  font-size: 1.1em;
+  display: none;
+}
+
+
+/* Main Styles */
+
+body {
+  background-color: $allmost-black;
+  font-family: "Lato", Helvetica, cursive;
+  font-size: 100%;
+  line-height: 1.42em;
+  padding-top: 50px;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+
+/* Random Requset Div */
+
+.wiki_random {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 50px;
+  &_title {
+    font-family: "Aref Ruqaa", Helvetica, cursive;
+    font-size: 2em;
+    margin: 20px auto;
+    word-spacing: 5px;
+  }
+  &_link {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.4em;
+    background-color: $light-blue;
+    text-shadow: $light-blue 0 1px 2px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    &:hover {
+      background-color: $dark-blue;
+    }
+  }
+}
+
+
+/* Browse Request Div */
+
+.wiki_search {
+  color: #fff;
+  text-align: center;
+  > section:first-of-type {
+    width: 70%;
+    height: 100%;
+    margin: 0 auto 20px;
+  }
+  &_title {
+    font-family: "Aref Ruqaa", Helvetica, cursive;
+    font-size: 2em;
+    margin: 20px auto;
+    word-spacing: 5px;
+  }
+}
+
+
+/* Section Search */
+
+.search_section {
+  label {
+    display: block;
+    padding: 5px;
+    border: 1px solid $white;
+    border-radius: 4px;
+    > span {
+      width: 30%;
+      display: inline-block;
+      position: relative;
+      padding: 7px 10px 6px;
+      background-color: $light-blue;
+      border-radius: 0 4px 4px 0;
+      cursor: auto;
+      -webkit-transition: all 0.2s ease;
+      transition: all 0.2s ease;
+      &:hover {
+        background-color: $dark-blue;
+      }
+      &:hover::before {
+        border-color: transparent $dark-blue transparent transparent;
+      }
+      &::before {
+        content: ' ';
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        left: -20px;
+        border-width: 10px;
+        border-color: transparent $light-blue transparent transparent;
+        border-style: solid;
+        -webkit-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+      }
+    }
+  }
+  .search_input {
+    width: 70%;
+    height: 35px;
+    display: inline-block;
+    font-size: 1.2em;
+    padding-left: 10px;
+    border-radius: 4px 0 0 4px;
+    -webkit-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+  }
+}
+
+
+/* Section Result */
+
+.results_section {
+  width: 100%;
+  padding: 10px 20px;
+  .well {
+    background-color: $white-smoke;
+    border-radius: 6px;
+    text-align: left;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    .res_title {
+      color: darken($dark-blue, 15%);
+      font-size: 1.3em;
+      font-weight: bold;
+      margin-bottom: 15px;
+      padding-left: 10px;
+    }
+    .res_text {
+      color: $allmost-black;
+      font-size: 1em;
+      font-weight: normal;
+      word-wrap: wrap;
+    }
+  }
+}
+
+.link_holder {
+  color: $allmost-black;
+  text-align: right;
+  padding-right: 10px;
+  .res_link {
+    font-size: 1.1em;
+    font-weight: normal;
+    color: $light-blue;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    &:hover,
+    &:focus {
+      color: darken($dark-blue, 5%);
+    }
+  }
+}
+
+.load_button {
+  bottom: 0;
+  outline: 0;
+  padding: 10px 20px;
+  background-color: $light-blue;
+  font-size: 1.1em;
+  font-weight: normal;
+  color: $white;
+  cursor: pointer;
+  border-radius: 6px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  &:hover,
+  &:focus {
+    background-color: $dark-blue;
+  }
+}

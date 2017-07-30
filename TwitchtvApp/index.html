@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>TwitchTv Api | FCC</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <style>
+    </style>
+  </head>
+
+  <body>
+    
+    <div class="container">
+      <header>
+        <h1>Twitch.TV Streams</h1>
+      </header> <!--header-->
+      <div class="main">
+        <div class="main-navigation">
+          <nav>
+            <li><a href="#all-channels" id="all" class="filterLink active">All</a></li>
+            <li><a href="#online-channels" id="on" class="filterLink">Online</a></li>
+            <li><a href="#offline-channels" id="off" class="filterLink">Offline</a></li>
+          </nav> <!--nav-->
+        </div> <!--.main-navigation-->
+        <div class="content">
+            <ul class="streams"></ul>
+        </div> <!--.content-->
+      </div> <!--.main-->
+    </div> <!--.container.main-->
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.js"></script>
+<!--    <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.3.3/underscore-min.js"></script>-->
+    <script src="main.js"></script>
+  </body>
+
+</html>
